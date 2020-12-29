@@ -1,0 +1,20 @@
+HTTP CLIENT
+An HTTP Client. An HttpClient can be used to send requests and retrieve their responses. ...
+ Once built, an HttpClient is immutable, and can be used to send multiple requests.
+  An HttpClient provides configuration information, and resource sharing, for all requests sent through it.
+  ----------------------------------------------------------------------------------------------------
+  What is HTTP client and HTTP server?
+  HTTP (Hypertext Transfer Protocol) is a communication protocol used to send data from one program
+   to another over the internet. At one end of the data transfer is a server and at the other end is a client.
+    ... Server accepts and receives request (and continues to listen) Server can continue to accept other requests.
+    ----------------------------------------------------------------------------------------------------------
+    What does HTTP client shutting down?
+    HTTP applications are free to close persistent connections after any period of time. ...
+     For example, after a persistent connection has been idle for a while, a server may decide to shut it down.
+     ---------------------------------------------------------------------------------------------------------------
+     Do we need to close HttpClient?
+     You do not need to explicitly close the HttpClient, however, (you may be doing this already but worth noting)
+      you should ensure that connections are released after method execution.
+     Edit: The ClientConnectionManager within the HttpClient is going to be responsible for maintaining the state of connections.
+     --------------------------------------------------------------------------------------------------------------------
+
